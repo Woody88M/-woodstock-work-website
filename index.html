@@ -3,138 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Woodstock Work - Hausmeisterservice & Allrounder</title>
+<title>Woodstock Work | Hausmeisterservice & Allrounder</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
 background:#111;
-color:white;
+color:#fff;
 line-height:1.6;
 }
 
-header{
+nav{
 background:#000;
-text-align:center;
-padding:40px 20px;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:2px solid #e67e00;
 }
 
-header img{
-width:280px;
+.logo-nav{
+color:#e67e00;
+font-size:24px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#e67e00;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+linear-gradient(135deg,#1a1a1a,#2d1a00);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero img{
+width:350px;
 max-width:90%;
 margin-bottom:20px;
 }
 
-h1{
-font-size:3rem;
+.hero h1{
+font-size:4rem;
 color:#e67e00;
 margin-bottom:10px;
 }
 
-.subtitle{
+.hero p{
 font-size:1.3rem;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-.button{
+.btn{
 display:inline-block;
-background:#e67e00;
-color:white;
 padding:15px 30px;
+margin:10px;
 border-radius:8px;
 text-decoration:none;
-font-size:20px;
-margin:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn-orange{
+background:#e67e00;
+color:white;
+}
+
+.btn-orange:hover{
+background:#ff921a;
+}
+
+.btn-green{
+background:#25D366;
+color:white;
 }
 
 section{
-padding:50px 20px;
-max-width:1100px;
+padding:80px 20px;
+max-width:1200px;
 margin:auto;
 }
 
-h2{
+.section-title{
+text-align:center;
+font-size:2.3rem;
 color:#e67e00;
-margin-bottom:20px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:#1d1d1d;
-padding:20px;
-margin:15px 0;
+padding:25px;
+border-radius:15px;
+text-align:center;
+border:1px solid #2d2d2d;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#e67e00;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#e67e00;
+}
+
+.why{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.contact-box{
+background:#1d1d1d;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.notice{
+background:#1d1d1d;
+padding:25px;
+border-left:5px solid #e67e00;
 border-radius:10px;
 }
 
 footer{
 background:#000;
 text-align:center;
-padding:30px;
-margin-top:30px;
+padding:40px 20px;
+margin-top:50px;
+border-top:2px solid #e67e00;
 }
 
-.whatsapp{
-background:#25D366;
+footer p{
+margin:8px 0;
 }
 
-.email{
-background:#444;
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:10px;
 }
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.hero img{
+width:260px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+
+<div class="logo-nav">
+WOODSTOCK WORK
+</div>
+
+<ul>
+<li><a href="#start">Start</a></li>
+<li><a href="#leistungen">Leistungen</a></li>
+<li><a href="#warum">Warum Wir</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="start">
+
+<div class="hero-content">
 
 <img src="IMG-20260618-WA0105.jpg" alt="Woodstock Work Logo">
 
-<h1>WOODSTOCK WORK</h1>
+<h1>Alles im Griff!</h1>
 
-<p class="subtitle">Alles im Griff!</p>
+<p>
+Ihr zuverlässiger Partner für Haus, Hof und Garten.
+</p>
 
-<p>Ihr zuverlässiger Partner für Haus, Hof und Garten in Tarp und Umgebung</p>
+<p>
+Zuverlässig • Schnell • Fair
+</p>
 
-<br>
+<a href="tel:015156667105" class="btn btn-orange">
+📞 Jetzt anrufen
+</a>
 
-<a class="button" href="tel:015156667105">📞 Jetzt anrufen</a>
+<a href="https://wa.me/4915156667105" class="btn btn-green">
+WhatsApp schreiben
+</a>
 
-<a class="button whatsapp" href="https://wa.me/4915156667105">WhatsApp</a>
-
-</header>
-
-<section>
-
-<h2>Unsere Leistungen</h2>
-
-<div class="card">🏡 Hausmeisterservice</div>
-
-<div class="card">🌳 Gartenarbeiten</div>
-
-<div class="card">🔨 Reparaturen & Montagen</div>
-
-<div class="card">❄️ Winterdienst</div>
-
-<div class="card">🎨 Renovierungsarbeiten</div>
-
-<div class="card">🚚 Entrümpelungen</div>
+</div>
 
 </section>
 
-<section>
+<section id="leistungen">
 
-<h2>Über Uns</h2>
+<h2 class="section-title">
+Unsere Leistungen
+</h2>
+
+<div class="cards">
 
 <div class="card">
+<h3>🏡 Hausmeisterservice</h3>
+<p>Betreuung und Pflege Ihrer Immobilie.</p>
+</div>
 
-Woodstock Work steht für Zuverlässigkeit, saubere Arbeit und faire Preise.
+<div class="card">
+<h3>🌳 Gartenarbeiten</h3>
+<p>Rasenmähen, Heckenschnitt und Gartenpflege.</p>
+</div>
 
-Wir unterstützen Privatkunden und Unternehmen bei Arbeiten rund um Haus, Hof und Garten.
+<div class="card">
+<h3>🔨 Reparaturen</h3>
+<p>Kleine Reparaturen und Montagearbeiten.</p>
+</div>
+
+<div class="card">
+<h3>❄️ Winterdienst</h3>
+<p>Schnee räumen und Streudienst.</p>
+</div>
+
+<div class="card">
+<h3>🎨 Renovierungen</h3>
+<p>Unterstützung bei Renovierungsarbeiten.</p>
+</div>
+
+<div class="card">
+<h3>🚚 Entrümpelungen</h3>
+<p>Schnell, sauber und zuverlässig.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="warum">
+
+<h2 class="section-title">
+Warum Woodstock Work?
+</h2>
+
+<div class="why">
+
+<div class="card">
+<h3>⚡ Schnell</h3>
+<p>Kurze Reaktionszeiten und schnelle Terminvergabe.</p>
+</div>
+
+<div class="card">
+<h3>✔ Zuverlässig</h3>
+<p>Pünktlich, ordentlich und professionell.</p>
+</div>
+
+<div class="card">
+<h3>💰 Faire Preise</h3>
+<p>Transparente und faire Preisgestaltung.</p>
+</div>
 
 </div>
 
@@ -142,15 +326,51 @@ Wir unterstützen Privatkunden und Unternehmen bei Arbeiten rund um Haus, Hof un
 
 <section>
 
-<h2>Kontakt</h2>
+<h2 class="section-title">
+Preise & Hinweise
+</h2>
 
-<div class="card">
+<div class="notice">
 
-📞 Telefon: 015156667105<br><br>
+Kostenlose Besichtigung und Angebotserstellung im näheren Umkreis.
 
-📧 E-Mail: woodstockwork26@gmail.com<br><br>
+<br><br>
 
-📍 Tarp & Umgebung
+Bei längeren Anfahrtswegen können zusätzliche Anfahrtskosten anfallen.
+
+Diese werden selbstverständlich vor Beginn der Arbeiten transparent besprochen.
+
+</div>
+
+</section>
+
+<section id="kontakt">
+
+<h2 class="section-title">
+Kontakt
+</h2>
+
+<div class="contact-box">
+
+<h3>Mandrak Woodhams</h3>
+
+<p>📍 Pastoratsweg 11<br>24963 Tarp</p>
+
+<br>
+
+<p>📞 0151 56667105</p>
+
+<p>📧 woodstockwork26@gmail.com</p>
+
+<br>
+
+<p>Tarp • Flensburg • Schleswig & Umgebung</p>
+
+<br>
+
+<a href="https://wa.me/4915156667105" class="btn btn-green">
+WhatsApp schreiben
+</a>
 
 </div>
 
@@ -158,9 +378,11 @@ Wir unterstützen Privatkunden und Unternehmen bei Arbeiten rund um Haus, Hof un
 
 <footer>
 
-<p>Woodstock Work © 2026</p>
+<p><strong>Woodstock Work</strong></p>
 
 <p>Hausmeisterservice & Allrounder</p>
+
+<p>© 2026 Woodstock Work</p>
 
 </footer>
 
