@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Woodstock Work | Hausmeisterservice & Allrounder</title>
+<title>Woodstock Work</title>
 
 <style>
 
@@ -11,198 +11,224 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+font-family:Arial,sans-serif;
 }
 
 body{
 background:#111;
-color:#fff;
-line-height:1.6;
+color:white;
 }
 
 nav{
 background:#000;
-padding:15px 30px;
+padding:15px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-border-bottom:2px solid #e67e00;
+border-bottom:3px solid #e67e00;
+flex-wrap:wrap;
 }
 
-.logo-nav{
-color:#e67e00;
-font-size:24px;
+.logo{
+font-size:30px;
 font-weight:bold;
+color:#e67e00;
 }
 
-nav ul{
+.menu{
 display:flex;
-gap:20px;
-list-style:none;
+gap:25px;
+align-items:center;
 }
 
-nav a{
+.menu a{
 color:white;
 text-decoration:none;
 font-weight:bold;
 }
 
-nav a:hover{
-color:#e67e00;
+.call-btn{
+background:#e67e00;
+padding:12px 20px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
-min-height:90vh;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
-padding:40px 20px;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-linear-gradient(135deg,#1a1a1a,#2d1a00);
+justify-content:space-between;
+padding:60px 5%;
+gap:40px;
+flex-wrap:wrap;
+background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600') center/cover;
+position:relative;
 }
 
-.hero-content{
-max-width:900px;
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
 }
 
-.hero img{
-width:350px;
-max-width:90%;
-margin-bottom:20px;
+.hero-content,
+.hero-image{
+position:relative;
+z-index:2;
+flex:1;
+min-width:300px;
 }
 
 .hero h1{
-font-size:4rem;
-color:#e67e00;
+font-size:60px;
 margin-bottom:10px;
 }
 
+.orange{
+color:#e67e00;
+}
+
 .hero p{
-font-size:1.3rem;
-margin-bottom:15px;
+font-size:24px;
+margin-bottom:20px;
+}
+
+.features{
+display:flex;
+gap:20px;
+margin:25px 0;
+flex-wrap:wrap;
+}
+
+.feature{
+font-size:16px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
+padding:15px 25px;
 border-radius:8px;
 text-decoration:none;
 font-weight:bold;
-transition:.3s;
+display:inline-block;
 }
 
-.btn-orange{
+.btn-call{
 background:#e67e00;
 color:white;
 }
 
-.btn-orange:hover{
-background:#ff921a;
-}
-
-.btn-green{
+.btn-wa{
 background:#25D366;
 color:white;
 }
 
-section{
-padding:80px 20px;
-max-width:1200px;
+.hero-image img{
+width:100%;
+max-width:500px;
+display:block;
 margin:auto;
+}
+
+.section{
+padding:70px 5%;
 }
 
 .section-title{
 text-align:center;
-font-size:2.3rem;
-color:#e67e00;
-margin-bottom:40px;
+font-size:40px;
+margin-bottom:50px;
 }
 
-.cards{
+.services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
-.card{
-background:#1d1d1d;
+.service{
+background:white;
+color:#222;
 padding:25px;
-border-radius:15px;
-text-align:center;
-border:1px solid #2d2d2d;
-transition:.3s;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
 
-.card:hover{
-transform:translateY(-5px);
-border-color:#e67e00;
-}
-
-.card h3{
-margin-bottom:10px;
+.service h3{
 color:#e67e00;
+margin-bottom:10px;
 }
 
 .why{
+background:#000;
+padding:60px 5%;
+}
+
+.why-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
-.contact-box{
-background:#1d1d1d;
-padding:30px;
-border-radius:15px;
+.why-box{
 text-align:center;
+padding:20px;
 }
 
-.notice{
-background:#1d1d1d;
+.contact{
+background:#f5f5f5;
+color:#222;
+padding:70px 5%;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.contact-card{
+background:white;
 padding:25px;
-border-left:5px solid #e67e00;
 border-radius:10px;
+}
+
+.contact-card h3{
+color:#e67e00;
+margin-bottom:15px;
 }
 
 footer{
 background:#000;
 text-align:center;
-padding:40px 20px;
-margin-top:50px;
-border-top:2px solid #e67e00;
-}
-
-footer p{
-margin:8px 0;
+padding:30px;
 }
 
 @media(max-width:768px){
 
-nav{
-flex-direction:column;
-gap:10px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
 .hero h1{
-font-size:2.4rem;
+font-size:40px;
 }
 
-.hero img{
-width:260px;
+.hero p{
+font-size:20px;
+}
+
+.menu{
+margin-top:15px;
+width:100%;
+justify-content:center;
 }
 
 }
@@ -214,163 +240,185 @@ width:260px;
 
 <nav>
 
-<div class="logo-nav">
+<div class="logo">
 WOODSTOCK WORK
 </div>
 
-<ul>
-<li><a href="#start">Start</a></li>
-<li><a href="#leistungen">Leistungen</a></li>
-<li><a href="#warum">Warum Wir</a></li>
-<li><a href="#kontakt">Kontakt</a></li>
-</ul>
+<div class="menu">
+<a href="#">Startseite</a>
+<a href="#leistungen">Leistungen</a>
+<a href="#warum">Über Uns</a>
+<a href="#kontakt">Kontakt</a>
+
+<a class="call-btn" href="tel:015156667105">
+📞 0151 56667105
+</a>
+
+</div>
 
 </nav>
 
-<section class="hero" id="start">
+<section class="hero">
 
 <div class="hero-content">
 
-<img src="IMG-20260618-WA0105.jpg" alt="Woodstock Work Logo">
+<h1>
+WOODSTOCK <span class="orange">WORK</span>
+</h1>
 
-<h1>Alles im Griff!</h1>
+<p>
+<b>ALLES IM GRIFF!</b>
+</p>
 
 <p>
 Ihr zuverlässiger Partner für Haus, Hof und Garten.
 </p>
 
-<p>
-Zuverlässig • Schnell • Fair
-</p>
+<div class="features">
+<div class="feature">⚡ Schnell</div>
+<div class="feature">🛡️ Zuverlässig</div>
+<div class="feature">💰 Faire Preise</div>
+</div>
 
-<a href="tel:015156667105" class="btn btn-orange">
+<div class="buttons">
+
+<a class="btn btn-call" href="tel:015156667105">
 📞 Jetzt anrufen
 </a>
 
-<a href="https://wa.me/4915156667105" class="btn btn-green">
+<a class="btn btn-wa" href="https://wa.me/4915156667105">
 WhatsApp schreiben
 </a>
 
 </div>
 
+</div>
+
+<div class="hero-image">
+
+<img src="IMG-20260618-WA0105.jpg" alt="Woodstock Work">
+
+</div>
+
 </section>
 
-<section id="leistungen">
+<section class="section" id="leistungen">
 
 <h2 class="section-title">
-Unsere Leistungen
+UNSERE <span class="orange">LEISTUNGEN</span>
 </h2>
 
-<div class="cards">
+<div class="services">
 
-<div class="card">
-<h3>🏡 Hausmeisterservice</h3>
+<div class="service">
+<h3>Hausmeisterservice</h3>
 <p>Betreuung und Pflege Ihrer Immobilie.</p>
 </div>
 
-<div class="card">
-<h3>🌳 Gartenarbeiten</h3>
-<p>Rasenmähen, Heckenschnitt und Gartenpflege.</p>
+<div class="service">
+<h3>Gartenarbeiten</h3>
+<p>Rasenmähen, Hecken und Pflege.</p>
 </div>
 
-<div class="card">
-<h3>🔨 Reparaturen</h3>
-<p>Kleine Reparaturen und Montagearbeiten.</p>
+<div class="service">
+<h3>Reparaturen & Montagen</h3>
+<p>Kleine Reparaturen und Montagen.</p>
 </div>
 
-<div class="card">
-<h3>❄️ Winterdienst</h3>
-<p>Schnee räumen und Streudienst.</p>
+<div class="service">
+<h3>Winterdienst</h3>
+<p>Schnee räumen und Streuen.</p>
 </div>
 
-<div class="card">
-<h3>🎨 Renovierungen</h3>
-<p>Unterstützung bei Renovierungsarbeiten.</p>
+<div class="service">
+<h3>Renovierungsarbeiten</h3>
+<p>Unterstützung bei Renovierungen.</p>
 </div>
 
-<div class="card">
-<h3>🚚 Entrümpelungen</h3>
-<p>Schnell, sauber und zuverlässig.</p>
+<div class="service">
+<h3>Allround-Service</h3>
+<p>Flexibel und zuverlässig.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="warum">
+<section class="why" id="warum">
 
 <h2 class="section-title">
-Warum Woodstock Work?
+WARUM <span class="orange">WOODSTOCK WORK?</span>
 </h2>
 
-<div class="why">
+<div class="why-grid">
 
-<div class="card">
+<div class="why-box">
 <h3>⚡ Schnell</h3>
-<p>Kurze Reaktionszeiten und schnelle Terminvergabe.</p>
+<p>Kurze Reaktionszeiten.</p>
 </div>
 
-<div class="card">
-<h3>✔ Zuverlässig</h3>
-<p>Pünktlich, ordentlich und professionell.</p>
+<div class="why-box">
+<h3>🛡️ Zuverlässig</h3>
+<p>Pünktlich und professionell.</p>
 </div>
 
-<div class="card">
+<div class="why-box">
 <h3>💰 Faire Preise</h3>
-<p>Transparente und faire Preisgestaltung.</p>
+<p>Transparente Preisgestaltung.</p>
+</div>
+
+<div class="why-box">
+<h3>👍 Kundenzufriedenheit</h3>
+<p>Ihre Zufriedenheit steht an erster Stelle.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section class="contact" id="kontakt">
 
 <h2 class="section-title">
-Preise & Hinweise
+KONTAKT
 </h2>
 
-<div class="notice">
+<div class="contact-grid">
 
-Kostenlose Besichtigung und Angebotserstellung im näheren Umkreis.
+<div class="contact-card">
 
-<br><br>
+<h3>Kontaktdaten</h3>
 
-Bei längeren Anfahrtswegen können zusätzliche Anfahrtskosten anfallen.
+<p><b>Name:</b> Mandrak Woodhams</p>
 
-Diese werden selbstverständlich vor Beginn der Arbeiten transparent besprochen.
+<p><b>Adresse:</b><br>
+Pastoratsweg 11<br>
+24963 Tarp
+</p>
+
+<p><b>Telefon:</b><br>
+0151 56667105
+</p>
+
+<p><b>E-Mail:</b><br>
+woodstockwork26@gmail.com
+</p>
 
 </div>
 
-</section>
+<div class="contact-card">
 
-<section id="kontakt">
+<h3>Direktkontakt</h3>
 
-<h2 class="section-title">
-Kontakt
-</h2>
-
-<div class="contact-box">
-
-<h3>Mandrak Woodhams</h3>
-
-<p>📍 Pastoratsweg 11<br>24963 Tarp</p>
+<p>Schreiben Sie uns bequem per WhatsApp.</p>
 
 <br>
 
-<p>📞 0151 56667105</p>
-
-<p>📧 woodstockwork26@gmail.com</p>
-
-<br>
-
-<p>Tarp • Flensburg • Schleswig & Umgebung</p>
-
-<br>
-
-<a href="https://wa.me/4915156667105" class="btn btn-green">
+<a class="btn btn-wa"
+href="https://wa.me/4915156667105">
 WhatsApp schreiben
 </a>
+
+</div>
 
 </div>
 
@@ -378,11 +426,8 @@ WhatsApp schreiben
 
 <footer>
 
-<p><strong>Woodstock Work</strong></p>
-
-<p>Hausmeisterservice & Allrounder</p>
-
-<p>© 2026 Woodstock Work</p>
+WOODSTOCK WORK © 2026<br>
+Hausmeisterservice & Allrounder
 
 </footer>
 
